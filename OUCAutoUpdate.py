@@ -4,7 +4,7 @@ import os
 
 Loginkey = os.environ["LOGINKEY"]
 Sendkey = os.environ["SENDKEY"]
-form_data = os.environ["FORM_DATA"]
+form_data = os.environ["FORM_DATA_TJ_HOME"]
 
 
 url = 'https://pingan.ouc.edu.cn/ncov/wap/default/save'
