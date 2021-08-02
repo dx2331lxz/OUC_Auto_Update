@@ -33,4 +33,5 @@ jobs:
           LOGINKEY: ${{ secrets.LOGINKEY }}
           SENDKEY: ${{ secrets.SENDKEY }}
           FORM_DATA: ${{ secrets.FORM_DATA }}
+          FORM_DATA_TJ_HOME: ${{ secrets.FORM_DATA_TJ_HOME }}
         run: python OUCAutoUpdate.py
