@@ -1,11 +1,17 @@
 import requests
 import time
 import os
+from datetime import datetime, timezone, timedelta
+
+
+tz = timezone(timedelta(hours=+8))
+fmt = '%Y%m%d'
+zoned_time = datetime.today().astimezone(tz)
 
 Loginkey = os.environ["LOGINKEY"]
 Sendkey = os.environ["SENDKEY"]
-form_data = os.environ["FORM_DATA_TJ_HOME"]
-
+form_data = os.environ["FORM_DATA"]
+form_data = form_data + '&date='+zoned_time.strftime(fmt)+'&created='+int(time.time())
 
 url = 'https://pingan.ouc.edu.cn/ncov/wap/default/save'
 
