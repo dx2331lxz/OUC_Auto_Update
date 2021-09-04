@@ -30,5 +30,7 @@ r = requests.post(url,data = form_data,headers = headers,cookies = Cookies)
 fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+time.strftime("%Y-%m-%d %X", time.localtime())+'&desp='+r.text
 
 print(r.text)
+print(zoned_time.strftime(fmt))
+print(int(time.time()))
 
 requests.get(fturl)
