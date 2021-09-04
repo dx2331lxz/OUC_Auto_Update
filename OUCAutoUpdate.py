@@ -11,7 +11,7 @@ zoned_time = datetime.today().astimezone(tz)
 Loginkey = os.environ["LOGINKEY"]
 Sendkey = os.environ["SENDKEY"]
 form_data = os.environ["FORM_DATA"]
-form_data = form_data + '&date='+zoned_time.strftime(fmt)+'&created='+int(time.time())
+form_data = form_data + '&date='+str(zoned_time.strftime(fmt))+'&created='+str(int(time.time()))
 
 url = 'https://pingan.ouc.edu.cn/ncov/wap/default/save'
 
