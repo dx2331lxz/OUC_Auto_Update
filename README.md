@@ -55,7 +55,9 @@
 
 1. cookie过期怎么办？
    - 我本以为登陆cookie会过期，可能隔一段时间就要重新抓包得到新的cookie，没想到结果却是意外坚挺….我已经测试了大概两个月还没有过期，所以可以放心使用。
+## LOG
 
+- 2021.10.26 修改requests证书认证导致的上报失败问题
 ## 有趣的事
 
 - 贵校竟与BUAA使用了同一家公司的上报系统….无意间发现，故而参考了其 [项目](https://github.com/windiboy/BUAAAutoUpdate)。不过貌似钱没给够？怎么还区别对待了呢？[OUC](https://pingan.ouc.edu.cn/uc/wap/login) ，[BUAA](https://app.buaa.edu.cn/uc/wap/login)

@@ -25,7 +25,7 @@ headers = {
 	'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
 	}
 
-r = requests.post(url,data = form_data,headers = headers,cookies = Cookies)
+r = requests.post(url,data = form_data,headers = headers,cookies = Cookies,verify=False)
 
 fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+time.strftime("%Y-%m-%d %X", time.localtime())+'&desp='+r.text
 
