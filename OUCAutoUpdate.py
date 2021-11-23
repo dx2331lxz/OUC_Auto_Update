@@ -27,6 +27,6 @@ headers = {
 
 r = requests.post(url,data = form_data,headers = headers,cookies = Cookies,verify=False)
 
-fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+ r.text["m"]
+fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+ str(r.data["m"])
 
 requests.get(fturl)
