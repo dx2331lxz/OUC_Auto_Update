@@ -27,7 +27,7 @@ headers = {
 
 r = requests.post(url,data = form_data,headers = headers,cookies = Cookies,verify=False)
 
-fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+time.strftime("%Y-%m-%d %X", time.localtime())+'&desp='+r.text
+fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+ r.text
 
 print(r.text)
 print(zoned_time.strftime(fmt))
