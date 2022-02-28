@@ -24,8 +24,10 @@ headers = {
 	'X-Requested-With':'XMLHttpRequest',
 	'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
 	}
-
-r = requests.post(url,data = form_data,headers = headers,cookies = Cookies,verify=False)
+try:
+	r = requests.post(url,data = form_data,headers = headers,cookies = Cookies,verify=False)
+except UnicodeEncodeError:
+	r = requests.post(url,data = form_data.encode("utf-8"),headers = headers,cookies = Cookies,verify=False)
 
 fturl = 'https://sctapi.ftqq.com/' + Sendkey + '.send?title= '+ str(r.json()["m"])
 
